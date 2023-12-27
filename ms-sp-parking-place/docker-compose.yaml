@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  parking-place:
+    build: .
+    ports:
+      - "8086:8086"
+    volumes:
+      - .:/app
+    networks:
+      - parking-place-network
+    depends_on:
+      - database-parking-place
+    env_file:
+      - .env
+
+  database-parking-place:
+    image: postgres:14.1
+    container_name: database-parking-place-container
+    platform: linux/amd64
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5436:5432"
+    networks:
+      - parking-place-network
+
+networks:
+  parking-place-network:
+    driver: bridge
+
+volumes:
+    database-parking-place:

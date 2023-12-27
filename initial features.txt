@@ -1,0 +1,70 @@
+
+List parking lots within 1 km radius
+This rule allows users to list parking lots that are within a 1 km radius of their current location. 
+This can be done using a geolocation service to determine the user's location and then querying a database of parking lots to find those that are within the specified radius.
+
+List total parking spots per lot
+This rule ensures that each parking lot lists the total number of available parking spots. 
+This can be done by storing the total number of spots in a field in the parking lot database.
+
+List available and occupied spots
+This rule ensures that users can see how many spots are available and how many are filled at each parking lot. T
+his can be done by using the total number of spots at the parking lot and the number of spots that are currently reserved or occupied.
+
+Provide real-time availability updates
+This rule ensures that the information about available parking spots is updated in real time. 
+This can be done using IoT sensors to monitor the spots and send updates to the system.
+
+Allow parking spot reservations
+This rule allows users to reserve parking spots in advance. 
+This can be done using an API service to allow users to make reservations.
+
+Implement dynamic pricing
+This rule allows the prices of parking spots to vary based on demand. 
+This can be done using an algorithm to calculate the price based on factors such as the time of day, the day of the week, and the location of the parking lot.
+
+Define cancellation policies
+This rule defines the rules for canceling reservations. 
+This may include cancellation fees or partial refunds.
+
+Automate payment upon car exit
+This rule allows payment to be made automatically when a car leaves a parking spot. 
+This can be done using an IoT sensor to detect when a car leaves the spot and then sending a charge to the user.
+
+Handle payments between users and lots
+This rule handles payments between users and parking lots. 
+This can be done using an online or offline payment service.
+
+Provide real-time availability updates (IoT data)
+This rule provides real-time updates on parking spot availability using IoT data. 
+This can be done using sensors to monitor the spots and send updates to the system.
+
+Send vehicle exit notifications
+This rule sends notifications when a vehicle leaves a parking spot.
+
+Manage pricing rules and variations based on time ranges
+This rule manages the pricing rules and variations based on time ranges. 
+This can be done using an algorithm to calculate the price based on the time of day.
+
+Generate parking revenue reports
+This rule generates reports on parking revenue for establishments.
+
+Track unique cars parked
+This rule tracks the number of unique cars that have parked at the establishment. 
+This can be done by counting the number of records in the system for each car.
+
+Identify peak parking hours
+This rule identifies the peak parking hours for the establishment. 
+This can be done by calculating the number of spots that are occupied at each hour.
+
+Manage parking reservations
+This rule manages parking reservations for users. 
+This can be done by storing the reservations in the system.
+
+Integrate with license plate reading sensors
+This rule integrates with license plate reading sensors to read the license plate of the car. 
+This can be done using an IoT sensor to read the license plate of the car.
+
+Verify if the car is entering the correct spot
+This rule verifies if the car is entering the correct parking spot. 
+This can be done by comparing the license plate of the car with the license plate of the reservation.
