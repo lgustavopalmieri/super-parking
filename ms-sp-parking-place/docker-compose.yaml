@@ -1,12 +1,12 @@
-version: '3'
+version: "3"
 
 services:
   parking-place:
     build: .
     ports:
       - "8086:8086"
-    volumes:
-      - .:/app
+    # volumes:
+    #   - .:/app
     networks:
       - parking-place-network
     depends_on:
@@ -37,4 +37,4 @@ networks:
     driver: bridge
 
 volumes:
-    database-parking-place:
+  database-parking-place:

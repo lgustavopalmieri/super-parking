@@ -8,6 +8,8 @@ import (
 
 	_ "github.com/lib/pq"
 	"github.com/lgustavopalmieri/super-parking/ms-sp-parking-place/configs"
+
+	
 )
 
 func main() {
@@ -22,6 +24,7 @@ func main() {
 		fmt.Println("error to connecting database:", err)
 		os.Exit(1)
 	}
+	defer db.Close()
 	println("connected on database", db.Ping())
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {

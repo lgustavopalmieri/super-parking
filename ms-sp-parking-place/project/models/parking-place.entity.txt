@@ -1,0 +1,36 @@
+Address:
+--------------------------------
+addressId string
+parkingPlaceId string
+street string 
+number int
+complement string
+district string
+uf string
+cep string
+lat string
+long string
+
+Account:
+--------------------------------
+accountId string
+parkingPlaceId string
+balance float 64
+
+Parking Spots:
+--------------------------------
+parkingSpotsId string
+parkingPlaceId string
+topic string
+
+Parking Place:
+--------------------------------
+parkingPlaceId string
+name string
+address (oneToOne)
+account (oneToOne)
+parkingSpots (oneToMany)
+
+
+
+

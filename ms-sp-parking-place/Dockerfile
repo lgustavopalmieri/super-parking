@@ -10,6 +10,11 @@ RUN go mod download
 COPY .env . 
 COPY . .
 
+RUN apk add --no-cache make 
+
+RUN wget -O /usr/local/bin/migrate https://github.com/golang-migrate/migrate/releases/download/v4.16.2/migrate.linux-amd64.tar.gz \
+    && chmod +x /usr/local/bin/migrate
+
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
 
 
@@ -25,3 +30,5 @@ COPY .env .
 EXPOSE 8086
 
 ENTRYPOINT ["./main"]
+
+CMD ["make", "migrate"]
