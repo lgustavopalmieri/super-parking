@@ -6,10 +6,8 @@ import (
 	"net/http"
 	"os"
 
-	_ "github.com/lib/pq"
 	"github.com/lgustavopalmieri/super-parking/ms-sp-parking-place/configs"
-
-	
+	_ "github.com/lib/pq"
 )
 
 func main() {
@@ -19,7 +17,7 @@ func main() {
 		os.Exit(1)
 	}
 	db, err := sql.Open("postgres", fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
-    cfg.DBHost, cfg.DBPort, cfg.DBUser, cfg.DBPassword, cfg.DBName))
+		cfg.DBHost, cfg.DBPort, cfg.DBUser, cfg.DBPassword, cfg.DBName))
 	if err != nil {
 		fmt.Println("error to connecting database:", err)
 		os.Exit(1)
