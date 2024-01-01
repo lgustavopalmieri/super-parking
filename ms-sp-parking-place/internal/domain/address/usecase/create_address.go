@@ -1,8 +1,8 @@
 package usecase
 
 import (
-	"github.com/lgustavopalmieri/super-parking/ms-sp-parking-place/internal/address/entity"
-	"github.com/lgustavopalmieri/super-parking/ms-sp-parking-place/internal/address/repository"
+	"github.com/lgustavopalmieri/super-parking/ms-sp-parking-place/internal/domain/address/entity"
+	"github.com/lgustavopalmieri/super-parking/ms-sp-parking-place/internal/domain/address/repository"
 )
 
 type CreateAddressInputDTO struct {

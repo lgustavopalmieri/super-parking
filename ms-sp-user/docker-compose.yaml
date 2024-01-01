@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  ms-sp-user-app:
+    build: .
+    command: ./.docker/start.sh
+    ports:
+      - 8081:8081
+    volumes:
+      - .:/home/node/ms-sp-user-app

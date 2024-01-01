@@ -1,0 +1,19 @@
+chmod +x .docker/start.sh
+
+docker compose exec app bash
+
+### Init ###
+
+npm init -y
+
+npm install typescript -D
+
+npx tsc --init
+
+npm install jest @types/jest -D
+
+npm install @swc/core @swc/cli @swc/jest -D
+
+npx jest --init
+
+npm install ts-node --save-dev

@@ -3,6 +3,7 @@ module github.com/lgustavopalmieri/super-parking/ms-sp-parking-place
 go 1.20
 
 require (
+	github.com/go-chi/chi/v5 v5.0.11
 	github.com/google/uuid v1.4.0
 	github.com/lib/pq v1.10.9
 	github.com/spf13/viper v1.18.2
