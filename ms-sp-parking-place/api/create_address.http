@@ -1,0 +1,16 @@
+POST http://localhost:8086/address/create HTTP/1.1
+Host: localhost:8086
+Content-Type: application/json
+
+{
+  "parking_place_id": "789012",
+  "street": "Rua Fictícia",
+  "address_number": 123,
+  "complement": "Apto 456",
+  "district": "Bairro dos Sonhos",
+  "uf": "SP",
+  "cep": "12345-678",
+  "lat": "-23.550520",
+  "lng": "-46.633307"
+}
+

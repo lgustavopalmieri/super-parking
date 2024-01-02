@@ -5,6 +5,7 @@ services:
     build: .
     ports:
       - "8086:8086"
+    platform: linux/amd64
     networks:
       - parking-place-network
     depends_on:

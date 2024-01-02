@@ -9,4 +9,4 @@ endif
 	migrate create -ext=sql -dir=sql/migrations -seq $(name)
 
 migrate:
-	migrate -path=sql/migrations -database "postgres://$(DB_USER):$(DB_PASSWORD)@$(DB_HOST):$(DB_PORT)/$(DB_NAME)?sslmode=disable" -verbose up
+	migrate -path=sql/migrations -database "postgres://$(DB_USER):$(DB_PASSWORD)@localhost:5436/$(DB_NAME)?sslmode=disable" -verbose up
