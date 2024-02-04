@@ -11,17 +11,20 @@ cep string
 lat string
 long string
 
+
 Account:
 --------------------------------
 accountId string
 parkingPlaceId string
 balance float 64
 
+
 Parking Spots:
 --------------------------------
 parkingSpotsId string
 parkingPlaceId string
 topic string
+
 
 Parking Place:
 --------------------------------

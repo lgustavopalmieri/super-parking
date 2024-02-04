@@ -2,7 +2,9 @@ version: "3"
 
 services:
   parking-place:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8086:8086"
     platform: linux/amd64
@@ -12,7 +14,6 @@ services:
       - database-parking-place
     env_file:
       - .env
-    command: ["dockerize", "-wait", "tcp://database-parking-place-container:5432", "-timeout", "20s", "./main"]
 
   database-parking-place:
     image: postgres:14.1

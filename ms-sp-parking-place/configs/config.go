@@ -12,6 +12,8 @@ type conf struct {
 	DBPassword    string `mapstructure:"DB_PASSWORD"`
 	DBName        string `mapstructure:"DB_NAME"`
 	WebServerPort string `mapstructure:"WEB_SERVER_PORT"`
+	MigrationURL  string `mapstructure:"MIGRATION_URL"`
+	DBSource      string `mapstructure:"DB_SOURCE"`
 }
 
 func LoadConfig(path string) (*conf, error) {
